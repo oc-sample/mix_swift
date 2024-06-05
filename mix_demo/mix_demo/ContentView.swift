@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
+            var version = getVersion()
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundStyle(.tint)
@@ -17,6 +18,12 @@ struct ContentView: View {
         }
         .padding()
     }
+  func getVersion() -> String {
+    var sum = AddInt(7, 8)
+    var version = HelloWrapper().getVersion()
+    print("version is \(version) result \(sum)")
+    return version
+  }
 }
 
 #Preview {

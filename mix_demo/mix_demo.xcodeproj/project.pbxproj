@@ -14,6 +14,8 @@
 		4AD9D1912C0F3D2200EAA6E2 /* mix_demoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD9D1902C0F3D2200EAA6E2 /* mix_demoTests.swift */; };
 		4AD9D19B2C0F3D2200EAA6E2 /* mix_demoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD9D19A2C0F3D2200EAA6E2 /* mix_demoUITests.swift */; };
 		4AD9D19D2C0F3D2200EAA6E2 /* mix_demoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD9D19C2C0F3D2200EAA6E2 /* mix_demoUITestsLaunchTests.swift */; };
+		4AD9D1B62C0F40FE00EAA6E2 /* hello_c.c in Sources */ = {isa = PBXBuildFile; fileRef = 4AD9D1B52C0F40FE00EAA6E2 /* hello_c.c */; };
+		4AD9D1C22C0F43F900EAA6E2 /* HelloWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4AD9D1C12C0F43F900EAA6E2 /* HelloWrapper.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,11 @@
 		4AD9D1962C0F3D2200EAA6E2 /* mix_demoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mix_demoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AD9D19A2C0F3D2200EAA6E2 /* mix_demoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mix_demoUITests.swift; sourceTree = "<group>"; };
 		4AD9D19C2C0F3D2200EAA6E2 /* mix_demoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mix_demoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4AD9D1B32C0F40FE00EAA6E2 /* mix_demo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "mix_demo-Bridging-Header.h"; sourceTree = "<group>"; };
+		4AD9D1B42C0F40FE00EAA6E2 /* hello_c.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = hello_c.h; sourceTree = "<group>"; };
+		4AD9D1B52C0F40FE00EAA6E2 /* hello_c.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = hello_c.c; sourceTree = "<group>"; };
+		4AD9D1C02C0F43F900EAA6E2 /* HelloWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelloWrapper.h; sourceTree = "<group>"; };
+		4AD9D1C12C0F43F900EAA6E2 /* HelloWrapper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = HelloWrapper.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +105,11 @@
 				4AD9D1812C0F3D2000EAA6E2 /* ContentView.swift */,
 				4AD9D1832C0F3D2200EAA6E2 /* Assets.xcassets */,
 				4AD9D1852C0F3D2200EAA6E2 /* Preview Content */,
+				4AD9D1B42C0F40FE00EAA6E2 /* hello_c.h */,
+				4AD9D1B52C0F40FE00EAA6E2 /* hello_c.c */,
+				4AD9D1B32C0F40FE00EAA6E2 /* mix_demo-Bridging-Header.h */,
+				4AD9D1C02C0F43F900EAA6E2 /* HelloWrapper.h */,
+				4AD9D1C12C0F43F900EAA6E2 /* HelloWrapper.mm */,
 			);
 			path = mix_demo;
 			sourceTree = "<group>";
@@ -195,6 +207,7 @@
 				TargetAttributes = {
 					4AD9D17B2C0F3D1F00EAA6E2 = {
 						CreatedOnToolsVersion = 15.3;
+						LastSwiftMigration = 1530;
 					};
 					4AD9D18B2C0F3D2200EAA6E2 = {
 						CreatedOnToolsVersion = 15.3;
@@ -258,6 +271,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4AD9D1822C0F3D2000EAA6E2 /* ContentView.swift in Sources */,
+				4AD9D1B62C0F40FE00EAA6E2 /* hello_c.c in Sources */,
+				4AD9D1C22C0F43F900EAA6E2 /* HelloWrapper.mm in Sources */,
 				4AD9D1802C0F3D2000EAA6E2 /* mix_demoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -419,6 +434,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"mix_demo/Preview Content\"";
@@ -430,7 +446,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -439,6 +455,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mj.mix-demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "mix_demo/mix_demo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -449,6 +467,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"mix_demo/Preview Content\"";
@@ -460,7 +479,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -469,6 +488,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mj.mix-demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "mix_demo/mix_demo-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
